@@ -23,7 +23,6 @@ class ViewController: UIViewController {
     @IBAction func backButton(_ sender: Any) {
         if(pageNumber == 1) {          //1ページ目の時
             imageView.stopAnimating()  //アニメーションを止める
-            pageNumber -= 1            //ページ番号を１減らす（0ページ目にする）
             imageView.image = UIImage(named: "wani0") //imageViewにイメージ"wani0"を表示する
         }
         else if(pageNumber > 1) {               //１ページ目でもエンドページでもない時
@@ -34,7 +33,6 @@ class ViewController: UIViewController {
     
     @IBAction func nextButton(_ sender: Any) {
         if(pageNumber == MAX_PAGE_NUMBER) {           //ページ番号が最終ページ（４）の時
-            pageNumber += 1                           //ページ番号を１増やす（５にする）
             imageView.stopAnimating()                 //アニメーションを止める
             imageView.image = UIImage(named: "wani9") //imageViewにイメージ"wani9"を表示する
         }
